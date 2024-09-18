@@ -1,0 +1,78 @@
+<div class="grid-container">
+  <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>
+        <h1>Bienvenido</h1>
+        <h3>Ingrese los datos de su mascota</h3>
+      </mat-card-title>
+    </mat-card-header>
+
+    <!--<img src="perro.png" alt="perro img" class="img-perro">-->
+    <mat-card-content class="dashboard-card-content">
+      <!-- Formulario -->
+       <div class="formulario-agregar">
+      <form (ngSubmit)="AgregarMascota()">
+        <label for="id">ID</label>
+        <input type="text" [(ngModel)]="newPet.id" name="id" required>
+        
+        <label for="name">Nombre de la mascota</label>
+        <input type="text" [(ngModel)]="newPet.name" name="name" required>
+        
+        <label for="weight">Peso</label>
+        <input type="text" [(ngModel)]="newPet.weight" name="weight" required>
+        
+        <label for="age">Edad</label>
+        <input type="text" [(ngModel)]="newPet.age" name="age" required>
+        
+        <label for="breed">Raza</label>
+        <input type="text" [(ngModel)]="newPet.breed" name="breed" required>
+        
+        <label for="date">Fecha</label>
+        <input type="text" [(ngModel)]="newPet.date" name="date" required>
+        
+        <label for="types">Agregue la especie de la mascota</label>
+        <input type="text" [(ngModel)]="speciesString" name="types" required>
+        
+        <button type="submit">Registrar Mascota</button>
+      </form>
+
+      <table>
+        @for (elementsPets of typesArray; track elementsPets) {
+          <div class="mostrar-elementos">
+            <h6 class="detalles-h6">Detalles</h6>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Nombre:</strong>
+              <div class="detalle-item-div">{{elementsPets.name}}</div>
+            </div>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Id:</strong>
+              <div class="detalle-item-div">{{elementsPets.id}}</div>
+            </div>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Peso:</strong>
+              <div class="detalle-item-div">{{elementsPets.weight}}</div>
+            </div>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Edad:</strong>
+              <div class="detalle-item-div">{{elementsPets.age}}</div>
+            </div>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Raza:</strong>
+              <div class="detalle-item-div">{{elementsPets.breed}}</div>
+            </div>
+            <div class="detalle-item">
+              <strong class="detalle-item-strong">Fecha :</strong>
+              <div class="detalle-item-div">{{elementsPets.date}}</div>
+            </div>
+            <div class="detalle-item">
+              <strong>species :</strong>
+              <div class="detalle-item-div">{{elementsPets.types}}</div>
+            </div>
+          </div>
+         }
+      </table>
+    </div>
+     
+    </mat-card-content>
+  </mat-card>
+</div>
