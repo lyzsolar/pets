@@ -1,128 +1,86 @@
-/* Estilos para el header */
-.header-shoes {
-    background-color: #13cfc0; /* Azul oscuro para el header */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    height: 80px;
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    color: #fff;
+.header-pets {
+  background-color: #13cfc0; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  height: 100px;
+  box-sizing: border-box;
+  color: #fff;
+  border-bottom: 4px solid #0f9e8e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-right: 55px; 
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 54px;
+  margin-top: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.buscar-contenedor {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 8px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.buscar-contenedor:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.buscar-input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  flex: 1;
+  color: #333;
+}
+
+.buscar-contenedor .icon {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #003366;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.buscar-contenedor .icon:hover {
+  color: #13cfc0;
+}
+
+@media (max-width: 768px) {
+  .header-pets {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    align-items: flex-start;
   }
-  
-  .menu-hamburguesa {
-    position: relative;
+
+  .logo-contenedor {
+    margin-bottom: 10px;
   }
-  
-  .icon {
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  .icon:hover {
-    color: #ddd;
-  }
-  
-  .menu-opciones {
-    display: none; /* Ocultar el menú por defecto */
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    width: 200px;
-  }
-  
-  .menu-opciones.show {
-    display: block; /* Mostrar el menú cuando se activa */
-  }
-  
-  .menu-opciones-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu-opciones-li {
-    padding: 10px 20px;
-  }
-  
-  .menu-opciones-li-a {
-    text-decoration: none;
-    color: #333333;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .menu-opciones-li-a .icon {
-    margin-right: 8px;
-  }
-  
-  .logo {
-    height: 50px;
-    object-fit: contain;
-  }
-  
-  .titulo {
-    font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    align-items: center;
-  }
-  
+
   .buscar-contenedor {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 5px 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 10px;
   }
-  
-  .buscar-input {
-    border: none;
-    outline: none;
-    font-size: 16px;
-    padding: 5px;
-    border-radius: 20px;
-    margin-right: 10px;
-    box-sizing: border-box;
-    flex: 1; /* Asegura que el input ocupe el espacio disponible */
-  }
-  
-  .buscar-contenedor .icon {
-    cursor: pointer;
-    font-size: 18px;
-    color: #003366;
-    transition: color 0.3s;
-  }
-  
-  .buscar-contenedor .icon:hover {
-    color: #ddd;
-  }
-  
-  /* Ajustes para pantallas pequeñas */
-  @media (max-width: 768px) {
-    .header-shoes {
-      flex-direction: column;
-      height: auto;
-      padding: 10px;
-      align-items: flex-start;
-    }
-  
-    .menu-hamburguesa {
-      margin-bottom: 10px;
-    }
-  
-    .buscar-contenedor {
-      width: 100%;
-      margin-top: 10px;
-    }
-  }
-  
+}

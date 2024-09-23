@@ -1,0 +1,73 @@
+.footer-pets {
+  background-color: #13cfc0;
+  padding: 20px 0;
+  color: rgb(0, 0, 0);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media {
+  display: flex;
+  gap: 15px;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #0f9e8e;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  gap: 10px;
+}
+
+.contact-info i {
+  margin-right: 5px;
+}
+
+.phone-number {
+  font-family: Arial, sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+.footer-text {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  opacity: 0.8;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .social-media {
+      margin-bottom: 10px;
+  }
+
+  .contact-info {
+      margin-top: 10px;
+  }
+}

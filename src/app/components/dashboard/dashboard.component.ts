@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { Pets } from '../../models/pets';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-dashboard',
@@ -63,6 +64,28 @@ export class DashboardComponent implements OnInit {
     this.speciesString = '';
   }
 
+  deleteMascota(id: number) {
+    Swal.fire({
+      title: '¿Desea eliminar esta mascota?',
+      text: "No podrás revertir esto!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, eliminar!',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.typesArray = this.typesArray.filter(pet => pet.id != id);
+        Swal.fire(
+          'Eliminado!',
+          'La mascota ha sido eliminada.',
+          'success'
+        );
+      }
+    });
+  }  
+
   private breakpointObserver = inject(BreakpointObserver);
 
   /** Basado en el tamaño de pantalla, cambiar de estándar a una columna por fila */
@@ -85,7 +108,4 @@ export class DashboardComponent implements OnInit {
     })
   );
 
-  trackById(index: number, pet: Pets): number {
-    return pet.id;
-  }
 }

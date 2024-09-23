@@ -1,46 +1,37 @@
-/* Ajustes generales del layout */
 .grid-container {
   margin: 20px;
   display: flex;
-  justify-content: center; /* Centrar el contenedor */
+  justify-content: center;
 }
 
 .dashboard-card {
   display: flex;
+  flex-direction: column;
   padding: 20px;
   margin: 20px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   background-color: #fff;
-  width: 100%; /* Ancho completo */
-  max-width: 1200px; /* Ancho máximo */
+  width: 100%;
+  max-width: 1200px;
 }
 
-.imagen-perrito {
-  flex: 1; /* Espacio para la imagen */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.perro {
-  max-width: 100%; /* Ajustar imagen al contenedor */
-  border-radius: 10px; /* Bordes redondeados en la imagen */
+mat-card-header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .formulario-agregar {
-  flex: 1; /* Espacio para el formulario */
-  margin-left: 20px; /* Margen entre imagen y formulario */
+  flex: 1;
 }
 
-/* Estilos para el formulario */
 form {
   margin: 10px 0;
   display: grid;
-  grid-template-columns: 1fr; /* Una columna */
+  grid-template-columns: 1fr;
   grid-gap: 16px;
   background-color: #f7f7f7;
-  padding: 20px; /* Aumentar padding */
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -51,7 +42,7 @@ form label {
 }
 
 form input {
-  padding: 12px; /* Padding aumentado */
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
@@ -60,16 +51,16 @@ form input {
 }
 
 form input:focus {
-  border-color: #3498db; /* Color del borde al enfocar */
+  border-color: #3498db;
 }
 
 form button {
-  padding: 12px; /* Aumentar padding del botón */
+  padding: 12px;
   background-color: #34dbdb;
   color: #fff;
   border: none;
   border-radius: 5px;
-  font-size: 16px; /* Tamaño de fuente aumentado */
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -78,7 +69,10 @@ form button:hover {
   background-color: #2980b9;
 }
 
-/* Estilo para las tarjetas que muestran los detalles */
+.mascotas-list {
+  margin-top: 20px;
+}
+
 .mostrar-elementos {
   background-color: #fdfdfd;
   border-radius: 12px;
@@ -92,15 +86,14 @@ form button:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Títulos y detalles */
-.datos-h6 {
+.detalles-h6 {
   color: #34495e;
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-.dato-item {
+.detalle-item {
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -108,12 +101,12 @@ form button:hover {
   margin: 8px 0;
 }
 
-.dato-item-strong {
+.detalle-item-strong {
   width: 120px;
   color: #2c3e50;
 }
 
-.dato-item-div {
+.detalle-item-div {
   flex: 1;
   text-align: left;
 }

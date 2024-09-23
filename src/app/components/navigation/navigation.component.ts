@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -24,6 +25,7 @@ import { HeaderComponent } from '../header/header.component';
     AsyncPipe,
     DashboardComponent,
     HeaderComponent,
+    FooterComponent,
   ]
 })
 export class NavigationComponent {
